@@ -16,6 +16,6 @@
 # Ignore node dependencies
 node_modules
 
-# Prevent from conflicts
+# Prevent sync conflicts
 .gitsync_lock
 .codesync_lock
