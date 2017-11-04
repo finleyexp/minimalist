@@ -21,7 +21,7 @@ const env = process.env.NODE_ENV || 'development'
  */
 
 app.get("/", (req, res) => {
-  res.status(200).send('Hello, friend!')
+  res.render('hello')
 })
 
 /**
