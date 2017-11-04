@@ -102,10 +102,15 @@ app.post("/containers/:name", (req, res) => {
   if (req.body.constructor === Object) {
     let keys = Object.keys(req.body)
     if (keys.includes('title') && keys.includes('price')) {
-      console.log(req.body)
+      req.app.locals.db.run("INSERT INTO items (container) VALUES (?, ?, ?);" [
+        req.params.name,
+        req.body.title,
+        req.body.price
+      ], () => {
+        res.redirect(req.path)
+      })
     }
   }
-  res.redirect(req.path)
 })
 app.delete("/containers/:name/items/:id", (req, res) => {
   // remove Item
