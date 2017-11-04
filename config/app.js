@@ -89,6 +89,13 @@ app.delete("/containers/:name/items/:id", (req, res) => {
 })
 
 /**
+ * Error handlers
+ */
+
+app.use(require(base + '/lib/middleware/page_not_found'))
+app.use(require(base + '/lib/middleware/render_error'))
+
+/**
  * Start server
  */
 
