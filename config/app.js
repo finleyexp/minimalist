@@ -126,9 +126,9 @@ app.post("/containers/:title/items", (req, res) => {
   }
 })
 app.delete("/containers/:title/items/:id", (req, res) => {
-  app.locals.db
-  // remove Item
-  res.sendStatus(200)
+  req.app.locals.db.run(`DELETE FROM items WHERE id=${req.params.id};`, () => {
+    res.redirect(`/containers/${req.params.title}`)
+  })
 })
 
 /**
