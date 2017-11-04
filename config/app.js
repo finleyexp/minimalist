@@ -6,12 +6,14 @@
 
 const express = require('express')
 const app = express()
+const path = require('path')
 
 /**
  * Globals
  */
 
 const port = 53003
+const base = path.join(__dirname, '..')
 
 /**
  * Routes
