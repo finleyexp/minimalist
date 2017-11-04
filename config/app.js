@@ -50,6 +50,14 @@ app.set('view engine', '.html.ejs')
 app.set('views', views)
 
 /**
+ * Static assets
+ */
+
+app.use('/assets', express.static(base + '/node_modules/jquery/dist'))
+app.use('/assets', express.static(base + '/node_modules/popper.js/dist/umd'))
+app.use('/assets', express.static(base + '/node_modules/bootstrap/dist'))
+
+/**
  * Routes
  */
 
