@@ -18,7 +18,7 @@ Changes are categorized as follows:
   * deps: add jquery
   * deps: add bootstrap
   * deps: add sqlite3
-  * add migrations handler
+  * db: add migrations handler
   * db: add create_table_container
   * db: add create_table_items
   * web: add Container creation
