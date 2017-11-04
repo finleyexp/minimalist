@@ -91,10 +91,6 @@ app.post("/containers", (req, res) => {
     })
   })
 })
-app.delete("/containers/:name", (req, res) => {
-  // only remove xl xxl xxl and so on
-  res.sendStatus(200)
-})
 app.post("/containers/:name", (req, res) => {
   console.log("Create item")
   console.log(req.params.name)
