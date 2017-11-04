@@ -4,7 +4,8 @@
   "description": "Bring only what you need.",
   "main": "index.js",
   "scripts": {
-    "start": "electron index.js"
+    "start": "electron index.js",
+    "rebuild": "electron-rebuild -f -w sqlite3"
   },
   "keywords": [
     "desktop",
@@ -21,7 +22,8 @@
     "popper.js": "1",
     "bootstrap": "4.0.0-beta",
     "font-awesome": "4",
-    "sqlite3": "3"
+    "sqlite3": "3",
+    "electron-rebuild": "1"
   },
   "engines": {
     "node": ">=8"

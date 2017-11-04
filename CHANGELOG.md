@@ -30,6 +30,10 @@ Changes are categorized as follows:
   * Set port to 53003
   * readme: Added getting started section
 
+* 1 bug fix:
+
+  * deps: add electron-rebuild to fix sqlite3 binding issues
+
 ## 2017-10-04, Version 0.1.0 (Unstable)
 
 * 1 minor enhancement:
