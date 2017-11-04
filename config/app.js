@@ -73,7 +73,6 @@ require(path.join(base, '/config/initializers/migrations'))(app)
 app.get("/", (req, res, next) => {
   req.app.locals.db.get("SELECT title, price FROM containers;", (err, row) => {
     if (err) { next(err) }
-    console.log(row)
     res.render('hello')
   })
 })
