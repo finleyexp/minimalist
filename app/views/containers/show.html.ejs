@@ -26,10 +26,25 @@
       </div>
     </header>
 
-    <footer class="container my-5 text-right">
-      <button type="button" class="btn btn-lg btn-light" style="cursor:pointer;">
-        <i class="fa fa-plus"></i>
-      </button>
+    <footer class="container my-5">
+      <form action="/containers/<%- container %>" method="post">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" name="title" class="form-control"></input>
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="number" name="price" class="form-control"></input>
+        </div>
+        <button type="submit"
+                class="btn btn-lg btn-light text-right"
+                style="cursor:pointer;">
+          <i class="fa fa-plus"></i>
+        </button>
+      </form>
     </footer>
   </body>
+
+  <script>
+  </script>
 </html>

@@ -96,8 +96,10 @@ app.delete("/containers/:name", (req, res) => {
   res.sendStatus(200)
 })
 app.post("/containers/:name", (req, res) => {
+  console.log("Create item")
+  console.log(req.params.name)
   // create Item { title: text, price: integer }
-  res.sendStatus(200)
+  res.redirect(req.path)
 })
 app.delete("/containers/:name/items/:id", (req, res) => {
   // remove Item
