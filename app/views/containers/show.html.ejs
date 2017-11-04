@@ -33,6 +33,14 @@
             <tr>
               <td width="100px;">$ <%- items[i].price %></td>
               <td><b><%- items[i].title %></b></td>
+              <td width="50px;" class="text-muted">
+                <button type="button"
+                        onclick="remove_item();"
+                        class="btn btn-link"
+                        style="color:#DDD;cursor:pointer;">
+                  <i class="fa fa-close"></i>
+                </button>
+              </td>
             </tr>
           </table>
         </section>
@@ -57,4 +65,18 @@
       </form>
     </footer>
   </body>
+
+  <script>
+    function remove_item() {
+      console.log(`/containers/<%- container %>/items/1`)
+      // let req = new XMLHttpRequest()
+      // req.onreadystatechange = () => {
+      //   if (req.readyState === XMLHttpRequest.DONE) {
+      //     window.location.reload(true)
+      //   }
+      // }
+      // req.open("DELETE", "/containers/<%- container %>/items/1")
+      // req.send()
+    }
+  </script>
 </html>
