@@ -18,6 +18,7 @@ const app = express()
  * Constants
  */
 
+const title = "Minimalist"
 const port = 53003
 const base = path.join(__dirname, '..')
 const env = process.env.NODE_ENV || 'development'
@@ -27,6 +28,7 @@ const views = path.join(base, '/app/views')
  * Locals
  */
 
+app.locals.title = title
 app.locals.port = port
 app.locals.base = base
 app.locals.env = env
