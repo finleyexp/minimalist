@@ -12,11 +12,12 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 3 major enhancements:
+* 4 major enhancements:
 
   * deps: add popper.js
   * deps: add jquery
   * deps: add bootstrap
+  * deps: add sqlite3
 
 * 2 minor enhancements:
 
