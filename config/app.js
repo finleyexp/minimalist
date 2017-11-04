@@ -71,6 +71,22 @@ app.get("/containers/:name", (req, res) => {
     container: req.params.name
   })
 })
+app.post("/containers", (req, res) => {
+  // only create xl xxl xxl and so on
+  res.sendStatus(200)
+})
+app.delete("/containers/:name", (req, res) => {
+  // only remove xl xxl xxl and so on
+  res.sendStatus(200)
+})
+app.post("/containers/:name", (req, res) => {
+  // create Item { title: text, price: integer }
+  res.sendStatus(200)
+})
+app.delete("/containers/:name/items/:id", (req, res) => {
+  // remove Item
+  res.sendStatus(200)
+})
 
 /**
  * Start server
