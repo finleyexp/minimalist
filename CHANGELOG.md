@@ -12,6 +12,8 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+## 2017-11-04, Version 1.0.0
+
 * 9 major enhancements:
 
   * deps: add popper.js
@@ -24,8 +26,9 @@ Changes are categorized as follows:
   * web: add Container creation
   * web: add Item creation, deletion
 
-* 3 minor enhancements:
+* 4 minor enhancements:
 
+  * Initialized project
   * Set view engine to ejs
   * Set port to 53003
   * readme: Added getting started section
@@ -33,9 +36,3 @@ Changes are categorized as follows:
 * 1 bug fix:
 
   * deps: add electron-rebuild to fix sqlite3 binding issues
-
-## 2017-10-04, Version 0.1.0 (Unstable)
-
-* 1 minor enhancement:
-
-  * Initialized project
