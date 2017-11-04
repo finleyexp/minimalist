@@ -84,9 +84,12 @@ app.get("/containers/:name", (req, res) => {
   })
 })
 app.post("/containers", (req, res) => {
-  console.log("add container")
-  req.app.locals.db.run("INSERT INTO containers VALUES (?)", ["xxl"])
-  res.sendStatus(200)
+  req.app.locals.db.get("SELECT COUNT(*) AS count FROM containers", (err, row) => {
+    let container = 'x'.repeat(row.count + 1) + 'l'
+    req.app.locals.db.run("INSERT INTO containers VALUES (?)", [container], () => {
+      res.sendStatus(200)
+    })
+  })
 })
 app.delete("/containers/:name", (req, res) => {
   // only remove xl xxl xxl and so on

@@ -3,7 +3,8 @@
 module.exports = (app) => {
   app.locals.db.run(`
 CREATE TABLE IF NOT EXISTS items (
-  title varchar(100),
+  container varchar(7),
+  title varchar(100) UNIQUE ON CONFLICT IGNORE,
   price integer DEFAULT 0
 );
   `)
