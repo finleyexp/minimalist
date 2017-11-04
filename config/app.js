@@ -99,9 +99,12 @@ app.post("/containers", (req, res) => {
   })
 })
 app.post("/containers/:name", (req, res) => {
-  console.log("Create item")
-  console.log(req.params.name)
-  // create Item { title: text, price: integer }
+  if (req.body.constructor === Object) {
+    let keys = Object.keys(req.body)
+    if (keys.includes('title') && keys.includes('price')) {
+      console.log(req.body)
+    }
+  }
   res.redirect(req.path)
 })
 app.delete("/containers/:name/items/:id", (req, res) => {
