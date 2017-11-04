@@ -84,7 +84,8 @@ app.get("/containers/:name", (req, res) => {
   })
 })
 app.post("/containers", (req, res) => {
-  // only create xl xxl xxl and so on
+  console.log("add container")
+  req.app.locals.db.run("INSERT INTO containers VALUES (?)", ["xxl"])
   res.sendStatus(200)
 })
 app.delete("/containers/:name", (req, res) => {

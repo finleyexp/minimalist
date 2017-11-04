@@ -48,8 +48,8 @@
       </section>
 
       <% for (let i=0; i < xl_containers.length; i++) { %>
-        <section id="container-lg" class="my-5">
-          <a href="/containers/lg" style="text-decoration:none;">
+        <section id="container-<%- xl_containers[i].title %>" class="my-5">
+          <a href="/containers/<%- xl_containers[i].title %>" style="text-decoration:none;">
             <div class="card text-white bg-dark">
               <div class="card-block">
                 <h1 class="text-center text-warning">
@@ -63,9 +63,20 @@
     </main>
 
     <footer class="container my-5 text-right">
-      <button type="button" class="btn btn-lg btn-light" style="cursor:pointer;">
+      <button type="button"
+              onclick="add_container();"
+              class="btn btn-lg btn-light"
+              style="cursor:pointer;">
         <i class="fa fa-plus"></i>
       </button>
     </footer>
   </body>
+
+  <script>
+    function add_container() {
+      let req = new XMLHttpRequest()
+      req.open("POST", "/containers")
+      req.send()
+    }
+  </script>
 </html>
