@@ -87,7 +87,7 @@ app.get("/", (req, res, next) => {
 })
 app.get("/containers/:title", (req, res) => {
   req.app.locals.db.all(`
-    SELECT title, price FROM items WHERE container=?;`,
+    SELECT id, title, price FROM items WHERE container=?;`,
     [req.params.title],
     (err, rows) => {
       if (err) { next(err) }
@@ -126,6 +126,7 @@ app.post("/containers/:title/items", (req, res) => {
   }
 })
 app.delete("/containers/:title/items/:id", (req, res) => {
+  app.locals.db
   // remove Item
   res.sendStatus(200)
 })
