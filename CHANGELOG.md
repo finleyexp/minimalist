@@ -12,6 +12,12 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+* 3 major enhancements:
+
+  * deps: add popper.js
+  * deps: add jquery
+  * deps: add bootstrap
+
 * 2 minor enhancements:
 
   * Set view engine to ejs
