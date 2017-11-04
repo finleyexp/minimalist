@@ -20,10 +20,11 @@ Changes are categorized as follows:
   * deps: add sqlite3
   * add migrations handler
 
-* 2 minor enhancements:
+* 3 minor enhancements:
 
   * Set view engine to ejs
   * Set port to 53003
+  * readme: Added getting started section
 
 ## 2017-10-04, Version 0.1.0 (Unstable)
 
