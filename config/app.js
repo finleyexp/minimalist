@@ -14,6 +14,7 @@ const path = require('path')
 
 const port = 53003
 const base = path.join(__dirname, '..')
+const env = process.env.NODE_ENV || 'development'
 
 /**
  * Routes
