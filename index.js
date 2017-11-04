@@ -1,3 +1,5 @@
+'use strict'
+
 const electron = require('electron')
 const desktop_app = electron.app
 const BrowserWindow = electron.BrowserWindow
@@ -8,7 +10,7 @@ let main_window = null
 desktop_app.on('ready', () => {
   let title = "Minimalist"
   let port = 53003
-  let web_app = require(path.join(__dirname, '/config/application.js'))
+  let web_app = require(path.join(__dirname, '/config/app.js'))
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
   let main_window = new BrowserWindow({
     width: width/2,

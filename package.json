@@ -21,6 +21,9 @@
     "popper.js": "1",
     "bootstrap": "4.0.0-beta"
   },
+  "engines": {
+    "node": ">=8"
+  },
   "author": "Andy Bettisworth <andy@accreu.com>",
   "license": "MIT"
 }
