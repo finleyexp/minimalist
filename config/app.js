@@ -71,7 +71,7 @@ require(path.join(base, '/config/initializers/migrations'))(app)
  */
 
 app.use(require(base + '/lib/middleware/json_body_parser'))
-app.use(require(base + '/lib/midldeware/urlencoded_body_parser'))
+app.use(require(base + '/lib/middleware/urlencoded_body_parser'))
 
 /**
  * Routes
