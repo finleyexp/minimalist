@@ -87,7 +87,7 @@ app.get("/", (req, res, next) => {
 })
 app.get("/containers/:title", (req, res) => {
   req.app.locals.db.all(`
-    SELECT title, price FROM items WHERE ?;`,
+    SELECT title, price FROM items WHERE container=?;`,
     [req.params.title],
     (err, rows) => {
       if (err) { next(err) }

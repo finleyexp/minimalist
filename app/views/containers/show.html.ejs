@@ -26,6 +26,19 @@
       </div>
     </header>
 
+    <main class="container">
+      <% for (let i=0; i < items.length; i++) { %>
+        <section id="container-<%- items[i].title %>" class="my-5">
+          <table class="table table-striped">
+            <tr>
+              <td width="100px;">$ <%- items[i].price %></td>
+              <td><b><%- items[i].title %></b></td>
+            </tr>
+          </table>
+        </section>
+      <% } %>
+    </main>
+
     <footer class="container my-5">
       <form action="/containers/<%- container %>/items" method="post">
         <div class="form-group">
