@@ -12,6 +12,11 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+* 2 minor enhancements:
+
+  * Set view engine to ejs
+  * Set port to 53003
+
 ## 2017-10-04, Version 0.1.0 (Unstable)
 
 * 1 minor enhancement:
