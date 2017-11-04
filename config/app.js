@@ -85,10 +85,18 @@ app.get("/", (req, res, next) => {
     })
   })
 })
-app.get("/containers/:name", (req, res) => {
-  res.render('containers/show', {
-    container: req.params.name
-  })
+app.get("/containers/:title", (req, res) => {
+  req.app.locals.db.all(`
+    SELECT title, price FROM items WHERE ?;`,
+    [req.params.title],
+    (err, rows) => {
+      if (err) { next(err) }
+      res.render('containers/show', {
+        container: req.params.title,
+        items: rows
+      })
+    }
+  )
 })
 app.post("/containers", (req, res) => {
   req.app.locals.db.get("SELECT COUNT(*) AS count FROM containers", (err, row) => {
@@ -98,7 +106,7 @@ app.post("/containers", (req, res) => {
     })
   })
 })
-app.post("/containers/:name/items", (req, res) => {
+app.post("/containers/:title/items", (req, res) => {
   if (req.body.constructor === Object) {
     let keys = Object.keys(req.body)
     if (keys.includes('title') && keys.includes('price')) {
@@ -108,16 +116,16 @@ app.post("/containers/:name/items", (req, res) => {
           title,
           price
         ) VALUES (?, ?, ?);`, [
-        req.params.name,
+        req.params.title,
         req.body.title,
         req.body.price
       ], () => {
-        res.redirect(req.path)
+        res.redirect(`/containers/${req.params.title}`)
       })
     }
   }
 })
-app.delete("/containers/:name/items/:id", (req, res) => {
+app.delete("/containers/:title/items/:id", (req, res) => {
   // remove Item
   res.sendStatus(200)
 })
