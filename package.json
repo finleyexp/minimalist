@@ -20,7 +20,8 @@
     "jquery": "3",
     "popper.js": "1",
     "bootstrap": "4.0.0-beta",
-    "font-awesome": "4"
+    "font-awesome": "4",
+    "sqlite3": "3"
   },
   "engines": {
     "node": ">=8"

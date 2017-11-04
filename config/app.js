@@ -23,6 +23,7 @@ const port = 53003
 const base = path.join(__dirname, '..')
 const env = process.env.NODE_ENV || 'development'
 const views = path.join(base, '/app/views')
+const db = require('./db')
 
 /**
  * Locals
@@ -33,6 +34,7 @@ app.locals.port = port
 app.locals.base = base
 app.locals.env = env
 app.locals.views = views
+app.locals.db = db
 
 /**
  * Settings
