@@ -98,7 +98,7 @@ app.post("/containers", (req, res) => {
     })
   })
 })
-app.post("/containers/:name", (req, res) => {
+app.post("/containers/:name/items", (req, res) => {
   if (req.body.constructor === Object) {
     let keys = Object.keys(req.body)
     if (keys.includes('title') && keys.includes('price')) {
