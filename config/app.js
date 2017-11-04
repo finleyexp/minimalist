@@ -57,6 +57,7 @@ app.use('/assets', express.static(base + '/node_modules/jquery/dist'))
 app.use('/assets', express.static(base + '/node_modules/popper.js/dist/umd'))
 app.use('/assets', express.static(base + '/node_modules/font-awesome'))
 app.use('/assets', express.static(base + '/node_modules/bootstrap/dist'))
+app.use('/assets/js', express.static(base + '/node_modules/turbolinks/dist'))
 
 /**
  * Routes
