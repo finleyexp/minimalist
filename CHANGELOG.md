@@ -12,13 +12,15 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 5 major enhancements:
+* 7 major enhancements:
 
   * deps: add popper.js
   * deps: add jquery
   * deps: add bootstrap
   * deps: add sqlite3
   * add migrations handler
+  * db: added create_table_container
+  * db: added create_table_items
 
 * 3 minor enhancements:
 
