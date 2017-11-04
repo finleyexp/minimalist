@@ -8,7 +8,7 @@ Run the following npm tasks to get started:
 
     git clone https://github.com/wurde/minimalist
     cd minimalist
-    npm install
+    npm run setup
     npm start
 
 ## Changelog
