@@ -71,9 +71,11 @@ require(path.join(base, '/config/initializers/migrations'))(app)
  */
 
 app.get("/", (req, res, next) => {
-  req.app.locals.db.get("SELECT title, price FROM containers;", (err, row) => {
+  req.app.locals.db.all("SELECT title FROM containers;", (err, rows) => {
     if (err) { next(err) }
-    res.render('hello')
+    res.render('hello', {
+      xl_containers: rows
+    })
   })
 })
 app.get("/containers/:name", (req, res) => {

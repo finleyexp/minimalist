@@ -46,6 +46,20 @@
           </div>
         </a>
       </section>
+
+      <% for (let i=0; i < xl_containers.length; i++) { %>
+        <section id="container-lg" class="my-5">
+          <a href="/containers/lg" style="text-decoration:none;">
+            <div class="card text-white bg-dark">
+              <div class="card-block">
+                <h1 class="text-center text-warning">
+                  <b><%- xl_containers[i].title %></b>
+                </h1>
+              </div>
+            </div>
+          </a>
+        </section>
+      <% } %>
     </main>
 
     <footer class="container my-5 text-right">
