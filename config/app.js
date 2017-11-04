@@ -23,7 +23,6 @@ const port = 53003
 const base = path.join(__dirname, '..')
 const env = process.env.NODE_ENV || 'development'
 const views = path.join(base, '/app/views')
-const db = require('./db')
 
 /**
  * Locals
@@ -34,7 +33,7 @@ app.locals.port = port
 app.locals.base = base
 app.locals.env = env
 app.locals.views = views
-app.locals.db = db
+app.locals.db = require('./db')(app)
 
 /**
  * Settings
@@ -60,6 +59,12 @@ app.use('/assets', express.static(base + '/node_modules/popper.js/dist/umd'))
 app.use('/assets', express.static(base + '/node_modules/font-awesome'))
 app.use('/assets', express.static(base + '/node_modules/bootstrap/dist'))
 app.use('/assets/js', express.static(base + '/node_modules/turbolinks/dist'))
+
+/**
+ * Initializers
+ */
+
+require(path.join(base, '/config/initializers/migrations'))(app)
 
 /**
  * Routes

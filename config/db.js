@@ -5,15 +5,10 @@
  */
 
 const sqlite3 = require('sqlite3')
+const path = require('path')
 
-/**
- * Initialize database
- */
-
-const db = new sqlite3.Database()
-
-/**
- * Export db
- */
-
-module.exports = db
+module.exports = (app) => {
+  const db_path = path.join(app.locals.base, '/db/development.sqlite3')
+  const db = new sqlite3.Database(db_path)
+  return db
+}

@@ -11,10 +11,14 @@
 !/tmp/.keep
 
 # Ignore databases
-/db/*.sqlite
+*.sqlite
+*.sqlite3
 
 # Ignore node dependencies
 node_modules
+
+# Ignore Dotenv files.
+.env
 
 # Prevent from conflicts
 .gitsync_lock
