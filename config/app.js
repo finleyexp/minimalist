@@ -66,6 +66,11 @@ app.use('/assets/js', express.static(base + '/node_modules/turbolinks/dist'))
 app.get("/", (req, res) => {
   res.render('hello')
 })
+app.get("/containers/:name", (req, res) => {
+  res.render('containers/show', {
+    container: req.params.name
+  })
+})
 
 /**
  * Start server
