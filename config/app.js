@@ -70,8 +70,12 @@ require(path.join(base, '/config/initializers/migrations'))(app)
  * Routes
  */
 
-app.get("/", (req, res) => {
-  res.render('hello')
+app.get("/", (req, res, next) => {
+  req.app.locals.db.get("SELECT title, price FROM containers;", (err, row) => {
+    if (err) { next(err) }
+    console.log(row)
+    res.render('hello')
+  })
 })
 app.get("/containers/:name", (req, res) => {
   res.render('containers/show', {

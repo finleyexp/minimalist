@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = (app) => {
-  console.log('migrations')
-  console.log(app.locals.db)
+  // check schema_migrations table for versions and match migrations
+  // run any pending migrations using app.locals.db
   return true
 }
