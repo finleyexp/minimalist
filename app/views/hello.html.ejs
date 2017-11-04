@@ -75,6 +75,11 @@
   <script>
     function add_container() {
       let req = new XMLHttpRequest()
+      req.onreadystatechange = () => {
+        if (req.readyState === XMLHttpRequest.DONE) {
+          window.location.reload(true)
+        }
+      }
       req.open("POST", "/containers")
       req.send()
     }
