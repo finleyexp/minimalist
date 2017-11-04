@@ -5,9 +5,14 @@
  */
 
 const express = require('express')
-const app = express()
 const path = require('path')
 const ejs = require('ejs')
+
+/**
+ * Initialize app
+ */
+
+const app = express()
 
 /**
  * Constants
@@ -31,8 +36,8 @@ app.locals.views = views
  * Settings
  */
 
-app.disable('x-powered-by')
 app.set('env', env)
+app.disable('x-powered-by')
 
 /**
  * View engine
