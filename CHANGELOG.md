@@ -12,6 +12,11 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+* 2 minor enhancements:
+
+  * npm update
+  * Add initial test
+
 ## 2017-11-04, Version 1.0.0
 
 * 9 major enhancements:
