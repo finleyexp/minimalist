@@ -12,10 +12,11 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 2 minor enhancements:
+* 3 minor enhancements:
 
   * npm update
   * Add initial test
+  * deps: add g-migration
 
 ## 2017-11-04, Version 1.0.0
 
