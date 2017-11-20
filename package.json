@@ -8,7 +8,8 @@
     "rebuild": "electron-rebuild -f -w sqlite3",
     "setup": "npm install && npm run rebuild",
     "test": "mocha --no-colors",
-    "test-watch": "mocha --watch --no-colors"
+    "test-watch": "mocha --watch --no-colors",
+    "g:migration": "./node_modules/.bin/g_migration"
   },
   "keywords": [
     "desktop",
@@ -29,7 +30,8 @@
     "turbolinks": "5"
   },
   "devDependencies": {
-    "mocha": "4"
+    "mocha": "4",
+    "g-migration": "^1.4.0"
   },
   "engines": {
     "node": ">= 8"
