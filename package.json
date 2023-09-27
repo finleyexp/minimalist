@@ -30,7 +30,7 @@
     "turbolinks": "5"
   },
   "devDependencies": {
-    "mocha": "4",
+    "mocha": "10",
     "g-migration": "^1.4.0"
   },
   "engines": {
